@@ -1,5 +1,5 @@
 # study_Recoil-Learn-Course
-https://learnrecoil.com/
+Learn Recoil 100% free at [learn recoil](https://learnrecoil.com/) ✨
 
 ## Table of Contents
 * Intro 
