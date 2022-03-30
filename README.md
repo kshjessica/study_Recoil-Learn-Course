@@ -67,3 +67,8 @@ And more...
     -   Optimising API Calls
     -   Unnecessary onSet calls
     -   Atom Effects vs Async Selectors
+
+## Issues
+
+yarn start failed on Node v17.3.0
+→ had to downgrade to Node v16.14.2
