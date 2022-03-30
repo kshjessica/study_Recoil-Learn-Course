@@ -70,5 +70,5 @@ And more...
 
 ## Issues
 
-yarn start failed on Node v17.3.0
-→ had to downgrade to Node v16.14.2
+-   yarn start failed on Node v17.3.0 → had to downgrade to Node v16.14.2
+-   potential security vulnerabilities in dependencies
