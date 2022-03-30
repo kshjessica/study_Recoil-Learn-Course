@@ -1,6 +1,6 @@
-# ✏️ Learn Recoil ✏️
+# ✏️ Learning Recoil ✏️
 
-Taking Recoil at [learn recoil](https://learnrecoil.com/) ✨
+Taking a Recoil Course at ✨ [learn recoil](https://learnrecoil.com/) ✨
 
 -   Cloned Repo 👉 https://github.com/jacques-blom/recoil-course
 -   Official Docs 👉 https://recoiljs.org/docs/basic-tutorial/intro
