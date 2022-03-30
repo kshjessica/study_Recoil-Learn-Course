@@ -1,4 +1,4 @@
-# study_Recoil-Learn-Course
+# ✏️ Learn Recoil ✏️
 
 Learn Recoil 100% free at [learn recoil](https://learnrecoil.com/) ✨
 
