@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import {RecoilRoot} from 'recoil'
 import {Atoms} from './examples/Atoms'
 import {Selectors} from './examples/Selectors'
+import Canvas from './Canvas'
 
 ReactDOM.render(
     <React.StrictMode>
@@ -18,6 +19,9 @@ ReactDOM.render(
                         </Route>
                         <Route path="/examples/selectors">
                             <Selectors />
+                        </Route>
+                        <Route>
+                            <Canvas />
                         </Route>
                     </Switch>
                 </Router>
