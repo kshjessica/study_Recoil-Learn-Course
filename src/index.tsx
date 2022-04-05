@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 import React, {Suspense} from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
@@ -22,6 +23,7 @@ ReactDOM.render(
                             <Selectors />
                         </Route>
                         <Route path="/examples/async">
+                            // Wrap Async in fallback to avoid suspends while rendering
                             <Suspense fallback={<div>Loading...</div>}>
                                 <Async />
                             </Suspense>

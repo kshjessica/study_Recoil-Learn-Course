@@ -1,3 +1,10 @@
+/*
+    If derived data is from ... > Then use ...
+    1) atom / selector > selector
+    2) React (e.g. component prop / useState / Redux) > selectorFamily
+    3) Both > selectorFamily
+*/
+
 import {Container, Heading, Text} from '@chakra-ui/layout'
 import {Select} from '@chakra-ui/select'
 import {Suspense, useState} from 'react'
@@ -6,6 +13,7 @@ import {selectorFamily, useRecoilValue} from 'recoil'
 const userState = selectorFamily({
     key: 'user',
     get: (userId: number) => async () => {
+        // recoil caches data for selectors of same input
         const userData = await fetch(`http://jsonplaceholder.typicode.com/users/${userId}`).then((res) => res.json())
         return userData
     },
