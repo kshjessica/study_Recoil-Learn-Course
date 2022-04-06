@@ -1,3 +1,8 @@
+/*
+    What is an idempotent operation?
+    : (In computing) one that has no additional effect if it is called more once with the same input parameters.
+      e.g. removing an item from a set can be considered an idempotent operation on the set
+*/
 export const getWeather = (zipCode: string) => {
     return new Promise<number>((resolve) => {
         setTimeout(() => {
