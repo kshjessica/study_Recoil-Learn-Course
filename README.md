@@ -64,7 +64,7 @@ And more...
     -   Atom Effects - Basics
     -   Atom Effects with Atom Families
     -   Async Atom Effects
-    -   Optimising API Calls
+    -   Optimizing API Calls
     -   Unnecessary onSet calls
     -   Atom Effects vs Async Selectors
 
