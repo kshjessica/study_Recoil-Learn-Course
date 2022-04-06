@@ -53,7 +53,7 @@ const UserWeather = ({userId}: {userId: number}) => {
             <Text>
                 <b>Weather for {user.address.city}:</b> {weather}°C
             </Text>
-            <Text onClick={refetch}>(Click to Refresh Weather)</Text>
+            <Text onClick={refetch}>**Click to Refresh Weather**</Text>
         </div>
     )
 }
