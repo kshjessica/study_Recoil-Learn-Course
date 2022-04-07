@@ -57,7 +57,7 @@ And more...
     -   Data Fetching - Advances
     -   Data Fetching in out Design Tool
 -   Patterns
-    -   Error Handling
+    -   [Error Handling](https://reactjs.org/docs/error-boundaries.html)
     -   Intermediate Selectors
     -   Selector Composition
 -   Atom Effects
