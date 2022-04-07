@@ -1,18 +1,8 @@
-import {Rectangle} from './components/Rectangle/Rectangle'
-import {PageContainer} from './PageContainer'
-import {Toolbar} from './Toolbar'
-import {atom, useSetRecoilState, useRecoilValue} from 'recoil'
+import {useSetRecoilState, useRecoilValue} from 'recoil'
+import {Rectangle, selectedElementState} from './components/Rectangle/Rectangle'
 import {EditProperties} from './EditProperties'
-
-export const selectedElementState = atom<number | null>({
-    key: 'selectedElement',
-    default: null,
-})
-
-export const elementsState = atom<number[]>({
-    key: 'elements',
-    default: [],
-})
+import {PageContainer} from './PageContainer'
+import {elementsState, Toolbar} from './Toolbar'
 
 function Canvas() {
     const setSelectedElement = useSetRecoilState(selectedElementState)

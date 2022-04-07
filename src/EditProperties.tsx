@@ -13,7 +13,7 @@ import produce from 'immer'
     - the param should be serializable
 */
 
-const EditPropertyState = selectorFamily<number, {path: string; id: number}>({
+export const EditPropertyState = selectorFamily<any, {path: string; id: number}>({
     key: 'editProperty',
     get:
         ({path, id}) =>
