@@ -1,11 +1,47 @@
 import {Box, Text, VStack} from '@chakra-ui/layout'
 import {Skeleton} from '@chakra-ui/skeleton'
+import {callApi} from '../api'
+import {selector, useRecoilValue} from 'recoil'
+import {elementState, selectedElementState} from './Rectangle/Rectangle'
+
+const imageIdState = selector({
+    key: 'imageId',
+    get: ({get}) => {
+        const id = get(selectedElementState)
+        if (id === null) return
+
+        const element = get(elementState(id))
+        return element.image?.id
+    },
+})
+
+const imageInfoState = selector({
+    key: 'imageInfo',
+    get: ({get}) => {
+        const imageId = get(imageIdState)
+        if (imageId === undefined) return
+
+        // selector does not rerun -> idea way to store data
+        return callApi('image-details', {queryParams: {seed: imageId}})
+    },
+})
 
 export const ImageInfo = () => {
+    const imageInfo = useRecoilValue(imageInfoState)
+
     return (
         <VStack spacing={2} alignItems="flex-start" width="100%">
-            <Info label="Author" value="Value goes here" />
-            <Info label="Image URL" value="Value goes here" />
+            <Info label="Author" value={imageInfo.author} />
+            <Info label="Image URL" value={imageInfo.url} />
+        </VStack>
+    )
+}
+
+export const ImageInfoFallback = () => {
+    return (
+        <VStack spacing={2} alignItems="flex-start" width="100%">
+            <Info label="Author" />
+            <Info label="Image URL" />
         </VStack>
     )
 }
