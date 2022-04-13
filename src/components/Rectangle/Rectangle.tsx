@@ -57,6 +57,7 @@ export const Rectangle = ({id}: {id: number}) => {
                         style,
                     })
                 }}
+                keepAspectRatio={element.image !== undefined}
             >
                 <Drag
                     position={element.style.position}
